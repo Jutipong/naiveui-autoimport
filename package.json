@@ -9,14 +9,6 @@
     "email": "chen.dev@foxmail.com",
     "url": "https://github.com/chansee97"
   },
-  "license": "MIT",
-  "homepage": "https://github.com/chansee97/nova-admin",
-  "repository": {
-    "url": "https://github.com/chansee97/nova-admin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/chansee97/nova-admin/issues"
-  },
   "keywords": [
     "Vue",
     "Vue3",
