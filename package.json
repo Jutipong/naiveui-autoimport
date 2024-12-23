@@ -37,7 +37,7 @@
     "UnoCSS"
   ],
   "scripts": {
-    "dev": "vite --mode dev --port 9980",
+    "dev": "vite --mode dev --port 3000",
     "dev:test": "vite --mode test",
     "dev:prod": "vite --mode prod",
     "build": "vite build --mode prod",
