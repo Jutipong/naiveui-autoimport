@@ -57,6 +57,7 @@ function handleSelect(key: string | number) {
             negativeText: t('common.cancel'),
             onPositiveClick: () => {
                 // logout()
+                console.log('logout')
             },
         })
     }

@@ -52,12 +52,14 @@ export function createVitePlugins(env: ImportMetaEnv) {
                 /\.vue\?vue/,
                 /\.md$/,
             ],
-            dts: 'src/typings/auto-imports.d.ts',
+            dirs: ['./src/utils/**', './src/stores', '!./src/utils/config/**'],
+            dts: './src/auto-imports.d.ts',
         }),
 
         // auto import components lib
         Components({
-            dts: 'src/typings/components.d.ts',
+            dirs: ['src/components', '!/src/components/@layouts/**'],
+            dts: 'src/components.d.ts',
             resolvers: [
                 IconsResolver({
                     prefix: false,
