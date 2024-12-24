@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import { useAppStore, useRouteStore } from '@/store/app'
 import { useAppStore } from '@/store/app'
 import {
     BackTop,
@@ -80,14 +79,7 @@ const appStore = useAppStore()
                 </router-view>
             </div>
 
-            <n-layout-footer
-                v-if="appStore.showFooter && !appStore.contentFullScreen"
-                bordered
-                position="absolute"
-                class="h-40px flex-center"
-            >
-                {{ appStore.footerText }}
-            </n-layout-footer>
+            <Footer />
             <BackTop />
         </n-layout>
     </n-layout>
