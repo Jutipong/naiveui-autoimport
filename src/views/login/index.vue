@@ -16,7 +16,6 @@ const appName = import.meta.env.VITE_APP_NAME
     <n-el class="wh-full flex-center" style="background-color: var(--body-color);">
         <div class="fixed right-40px top-40px text-lg">
             <DarkModeSwitch />
-            <LangsSwitch />
         </div>
         <n-el
             class="h-full w-full p-4xl sm:h-700px sm:w-450px"

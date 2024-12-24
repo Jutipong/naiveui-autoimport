@@ -6,7 +6,6 @@ import {
     FullScreen,
     Logo,
     Menu,
-    Notices,
     Setting,
     UserCenter,
 } from './components'
@@ -26,10 +25,8 @@ const appStore = useAppStore()
                     <Logo v-if="appStore.showLogo" />
                     <Menu mode="horizontal" responsive />
                     <div class="h-full flex-y-center gap-1 p-x-xl">
-                        <Notices />
                         <FullScreen />
                         <DarkModeSwitch />
-                        <LangsSwitch />
                         <Setting />
                         <UserCenter />
                     </div>

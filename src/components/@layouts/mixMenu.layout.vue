@@ -7,7 +7,6 @@ import {
     CollapaseButton,
     FullScreen,
     Logo,
-    Notices,
     Setting,
     UserCenter,
 } from './components'
@@ -111,10 +110,8 @@ function updateTopMenu(key: string) {
                         @update:value="updateTopMenu"
                     />
                     <div class="h-full flex-y-center gap-1 p-x-xl">
-                        <Notices />
                         <FullScreen />
                         <DarkModeSwitch />
-                        <LangsSwitch />
                         <Setting />
                         <UserCenter />
                     </div>

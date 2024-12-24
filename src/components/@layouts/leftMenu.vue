@@ -8,7 +8,6 @@ import {
     FullScreen,
     Logo,
     Menu,
-    Notices,
     Setting,
     UserCenter,
 } from './components'
@@ -49,10 +48,8 @@ const appStore = useAppStore()
                     </div>
                     <div class="h-full flex-y-center gap-1 p-x-xl">
                         <!-- <Search /> -->
-                        <Notices />
                         <FullScreen />
                         <DarkModeSwitch />
-                        <LangsSwitch />
                         <Setting />
                         <UserCenter />
                     </div>

@@ -5,8 +5,6 @@ import SettingDrawer from './common/SettingDrawer.vue'
 import Breadcrumb from './header/Breadcrumb.vue'
 import CollapaseButton from './header/CollapaseButton.vue'
 import FullScreen from './header/FullScreen.vue'
-import Notices from './header/Notices.vue'
-// import Search from './header/Search.vue'
 
 import UserCenter from './header/UserCenter.vue'
 
@@ -20,8 +18,6 @@ export {
     FullScreen,
     Logo,
     Menu,
-    Notices,
-    // Search,
     Setting,
     SettingDrawer,
     UserCenter,
