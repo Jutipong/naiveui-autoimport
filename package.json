@@ -77,7 +77,7 @@
     "vite-bundle-visualizer": "^1.2.1",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-devtools": "7.6.3",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
