@@ -5,7 +5,6 @@ import { useAppStore } from '@/store/app'
 import {
     BackTop,
     CollapaseButton,
-    FullScreen,
     Logo,
     Setting,
     UserCenter,
@@ -110,7 +109,6 @@ function updateTopMenu(key: string) {
                         @update:value="updateTopMenu"
                     />
                     <div class="h-full flex-y-center gap-1 p-x-xl">
-                        <FullScreen />
                         <DarkModeSwitch />
                         <Setting />
                         <UserCenter />

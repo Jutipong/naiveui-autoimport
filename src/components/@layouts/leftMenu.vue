@@ -5,7 +5,6 @@ import {
     BackTop,
     Breadcrumb,
     CollapaseButton,
-    FullScreen,
     Logo,
     Menu,
     Setting,
@@ -48,7 +47,6 @@ const appStore = useAppStore()
                     </div>
                     <div class="h-full flex-y-center gap-1 p-x-xl">
                         <!-- <Search /> -->
-                        <FullScreen />
                         <DarkModeSwitch />
                         <Setting />
                         <UserCenter />

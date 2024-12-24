@@ -3,7 +3,6 @@
 import { useAppStore } from '@/store/app'
 import {
     BackTop,
-    FullScreen,
     Logo,
     Menu,
     Setting,
@@ -25,7 +24,6 @@ const appStore = useAppStore()
                     <Logo v-if="appStore.showLogo" />
                     <Menu mode="horizontal" responsive />
                     <div class="h-full flex-y-center gap-1 p-x-xl">
-                        <FullScreen />
                         <DarkModeSwitch />
                         <Setting />
                         <UserCenter />
