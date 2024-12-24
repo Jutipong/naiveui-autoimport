@@ -73,10 +73,7 @@ const appStore = useAppStore()
                 }"
             >
                 <router-view v-slot="{ Component, route }" class="flex-1">
-                    <transition
-                        :name="appStore.transitionAnimation"
-                        mode="out-in"
-                    >
+                    <transition :name="appStore.transitionAnimation" mode="out-in">
                         <!-- <keep-alive :include="routeStore.cacheRoutes"> -->
                         <component
                             :is="Component"

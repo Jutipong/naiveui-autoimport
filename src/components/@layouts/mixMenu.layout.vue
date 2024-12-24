@@ -8,7 +8,6 @@ import {
     FullScreen,
     Logo,
     Notices,
-    Search,
     Setting,
     TabBar,
     UserCenter,
@@ -113,7 +112,6 @@ function updateTopMenu(key: string) {
                         @update:value="updateTopMenu"
                     />
                     <div class="h-full flex-y-center gap-1 p-x-xl">
-                        <Search />
                         <Notices />
                         <FullScreen />
                         <DarkModeSwitch />

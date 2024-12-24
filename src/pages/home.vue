@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const text = ref('Index')
+const text = ref('Home')
 </script>
 
 <template>

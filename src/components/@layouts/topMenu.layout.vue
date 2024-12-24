@@ -7,7 +7,6 @@ import {
     Logo,
     Menu,
     Notices,
-    Search,
     Setting,
     TabBar,
     UserCenter,
@@ -28,7 +27,6 @@ const appStore = useAppStore()
                     <Logo v-if="appStore.showLogo" />
                     <Menu mode="horizontal" responsive />
                     <div class="h-full flex-y-center gap-1 p-x-xl">
-                        <Search />
                         <Notices />
                         <FullScreen />
                         <DarkModeSwitch />

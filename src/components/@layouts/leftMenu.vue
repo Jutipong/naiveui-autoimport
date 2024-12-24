@@ -15,8 +15,8 @@ import {
     UserCenter,
 } from './components'
 
-// const routeStore = useRouteStore()
-// const routeStore = useRouter()
+const routeStore = { cacheRoutes: 'map' }
+
 const appStore = useAppStore()
 </script>
 
@@ -77,13 +77,13 @@ const appStore = useAppStore()
                         :name="appStore.transitionAnimation"
                         mode="out-in"
                     >
-                        <!-- <keep-alive :include="routeStore.cacheRoutes"> -->
-                        <component
-                            :is="Component"
-                            v-if="appStore.loadFlag"
-                            :key="route.fullPath"
-                        />
-                        <!-- </keep-alive> -->
+                        <keep-alive :include="routeStore.cacheRoutes">
+                            <component
+                                :is="Component"
+                                v-if="appStore.loadFlag"
+                                :key="route.fullPath"
+                            />
+                        </keep-alive>
                     </transition>
                 </router-view>
             </div>

@@ -85,14 +85,5 @@
     "unplugin-vue-router": "^0.10.9",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vue-tsc": "^2.2.0"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
-  },
-  "volta": {
-    "node": "20.12.2"
   }
 }
