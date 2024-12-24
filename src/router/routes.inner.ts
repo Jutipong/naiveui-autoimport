@@ -2,13 +2,13 @@ import type { RouteRecordRaw } from 'vue-router'
 
 /* 页面中的一些固定路由，错误页等 */
 export const routes: RouteRecordRaw[] = [
-    {
-        path: '/',
-        name: 'root',
-        redirect: '/appRoot',
-        children: [
-        ],
-    },
+    // {
+    //     path: '/',
+    //     name: 'root',
+    //     redirect: '/appRoot',
+    //     children: [
+    //     ],
+    // },
     {
         path: '/login',
         name: 'login',
