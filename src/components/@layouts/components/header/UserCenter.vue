@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { useAuthStore } from '@/store/auth'
+import type { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface'
 import { renderIcon } from '@/utils/icon'
 import IconBookOpen from '~icons/icon-park-outline/book-open'
 import IconGithub from '~icons/icon-park-outline/github'
@@ -46,7 +46,7 @@ const options = computed(() => {
             key: 'loginOut',
             icon: () => h(IconLogout),
         },
-    ]
+    ] as DropdownMixedOption[]
 })
 function handleSelect(key: string | number) {
     if (key === 'loginOut') {
