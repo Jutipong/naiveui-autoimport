@@ -9,7 +9,6 @@ import {
     Logo,
     Notices,
     Setting,
-    TabBar,
     UserCenter,
 } from './components'
 
@@ -120,7 +119,6 @@ function updateTopMenu(key: string) {
                         <UserCenter />
                     </div>
                 </div>
-                <TabBar v-if="appStore.showTabs" class="h-45px" />
             </n-layout-header>
             <div
                 class="flex flex-1 flex-col p-16px"

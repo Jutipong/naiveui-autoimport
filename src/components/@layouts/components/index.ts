@@ -12,7 +12,6 @@ import UserCenter from './header/UserCenter.vue'
 
 import Logo from './sider/Logo.vue'
 import Menu from './sider/Menu.vue'
-import TabBar from './tab/TabBar.vue'
 
 export {
     BackTop,
@@ -25,6 +24,5 @@ export {
     // Search,
     Setting,
     SettingDrawer,
-    TabBar,
     UserCenter,
 }

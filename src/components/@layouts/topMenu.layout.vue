@@ -8,7 +8,6 @@ import {
     Menu,
     Notices,
     Setting,
-    TabBar,
     UserCenter,
 } from './components'
 
@@ -35,7 +34,6 @@ const appStore = useAppStore()
                         <UserCenter />
                     </div>
                 </div>
-                <TabBar v-if="appStore.showTabs" class="h-45px" />
             </n-layout-header>
             <div
                 class="flex flex-1 flex-col p-16px"

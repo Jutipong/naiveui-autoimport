@@ -4,7 +4,7 @@ import { useAppStore } from '@/store/app'
 import { Menus } from '@/store/menus'
 
 // const menus = Menus()
-const router = useRouter()
+// const router = useRouter()
 const route = useRoute()
 // const routes = computed(() => {
 //     // console.log(route)
@@ -28,7 +28,7 @@ const appStore = useAppStore()
         <n-el
             v-for="(item) in routes"
             :key="item.name as string"
-            tag="li" style=" color: var(--text-color-2); transition: 0.6s var(--cubic-bezier-ease-in-out);"
+            tag="li" style=" color: var(--text-color-2); transition: 0.3s var(--cubic-bezier-ease-in-out);"
             class="split flex-center cursor-pointer gap-2"
         >
             <nova-icon v-if="appStore.showBreadcrumbIcon" :icon="typeof item.icon === 'string' ? item.icon : undefined" />

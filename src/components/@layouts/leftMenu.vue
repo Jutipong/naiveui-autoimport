@@ -9,13 +9,11 @@ import {
     Logo,
     Menu,
     Notices,
-    // Search,
     Setting,
-    TabBar,
     UserCenter,
 } from './components'
 
-const routeStore = { cacheRoutes: 'map' }
+// const routeStore = { cacheRoutes: 'map' }
 
 const appStore = useAppStore()
 </script>
@@ -59,7 +57,6 @@ const appStore = useAppStore()
                         <UserCenter />
                     </div>
                 </div>
-                <TabBar v-if="appStore.showTabs" class="h-45px" />
             </n-layout-header>
             <!-- 121 = 16 + 45 + 60 45是面包屑高度 60是标签栏高度 -->
             <!-- 56 = 16 + 40 40是页脚高度 -->
@@ -77,13 +74,13 @@ const appStore = useAppStore()
                         :name="appStore.transitionAnimation"
                         mode="out-in"
                     >
-                        <keep-alive :include="routeStore.cacheRoutes">
-                            <component
-                                :is="Component"
-                                v-if="appStore.loadFlag"
-                                :key="route.fullPath"
-                            />
-                        </keep-alive>
+                        <!-- <keep-alive :include="routeStore.cacheRoutes"> -->
+                        <component
+                            :is="Component"
+                            v-if="appStore.loadFlag"
+                            :key="route.fullPath"
+                        />
+                        <!-- </keep-alive> -->
                     </transition>
                 </router-view>
             </div>
