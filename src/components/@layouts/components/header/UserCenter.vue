@@ -8,46 +8,44 @@ import IconUser from '~icons/icon-park-outline/user'
 
 const { t } = useI18n()
 
-// const { userInfo, logout } = useAuthStore()
 const router = useRouter()
 
-const options = computed(() => {
-    return [
-        {
-            label: t('app.userCenter'),
-            key: 'userCenter',
-            icon: () => h(IconUser),
-        },
-        {
-            type: 'divider',
-            key: 'd1',
-        },
-        {
-            label: 'Github',
-            key: 'guthub',
-            icon: () => h(IconGithub),
-        },
-        {
-            label: 'Gitee',
-            key: 'gitee',
-            icon: renderIcon('simple-icons:gitee'),
-        },
-        {
-            label: 'Docs',
-            key: 'docs',
-            icon: () => h(IconBookOpen),
-        },
-        {
-            type: 'divider',
-            key: 'd1',
-        },
-        {
-            label: t('app.loginOut'),
-            key: 'loginOut',
-            icon: () => h(IconLogout),
-        },
-    ] as DropdownMixedOption[]
-})
+const options: DropdownMixedOption[] = [
+    {
+        label: t('app.userCenter'),
+        key: 'userCenter',
+        icon: () => h(IconUser),
+    },
+    {
+        type: 'divider',
+        key: 'd1',
+    },
+    {
+        label: 'Github',
+        key: 'guthub',
+        icon: () => h(IconGithub),
+    },
+    {
+        label: 'Gitee',
+        key: 'gitee',
+        icon: renderIcon('simple-icons:gitee'),
+    },
+    {
+        label: 'Docs',
+        key: 'docs',
+        icon: () => h(IconBookOpen),
+    },
+    {
+        type: 'divider',
+        key: 'd1',
+    },
+    {
+        label: t('app.loginOut'),
+        key: 'loginOut',
+        icon: () => (IconLogout),
+    },
+]
+
 function handleSelect(key: string | number) {
     if (key === 'loginOut') {
         window.$dialog?.info({
