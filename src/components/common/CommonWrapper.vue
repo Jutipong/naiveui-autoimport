@@ -1,18 +1,18 @@
 <script setup lang="ts"></script>
 
 <template>
-  <n-el
-    tag="div"
-    class="el p-3 cursor-pointer rounded"
-  >
-    <n-flex
-      align="center"
-      :wrap="false"
-      class="h-full"
+    <n-el
+        tag="div"
+        class="el cursor-pointer rounded p-3"
     >
-      <slot />
-    </n-flex>
-  </n-el>
+        <n-flex
+            align="center"
+            :wrap="false"
+            class="h-full"
+        >
+            <slot />
+        </n-flex>
+    </n-el>
 </template>
 
 <style scoped>

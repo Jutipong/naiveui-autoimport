@@ -7,13 +7,13 @@ import topMenu from './topMenu.layout.vue'
 
 const appStore = useAppStore()
 const layoutMap = {
-  leftMenu,
-  topMenu,
-  mixMenu,
+    leftMenu,
+    topMenu,
+    mixMenu,
 }
 </script>
 
 <template>
-  <SettingDrawer />
-  <component :is="layoutMap[appStore.layoutMode]" />
+    <SettingDrawer />
+    <component :is="layoutMap[appStore.layoutMode]" />
 </template>

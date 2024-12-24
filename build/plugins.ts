@@ -18,75 +18,75 @@ import VueDevTools from 'vite-plugin-vue-devtools'
  * @return {*}
  */
 export function createVitePlugins(env: ImportMetaEnv) {
-  const plugins = [
+    const plugins = [
     // support vue
-    vue(),
-    vueJsx(),
-    VueDevTools(),
+        vue(),
+        vueJsx(),
+        VueDevTools(),
 
-    // support unocss
-    UnoCSS(),
+        // support unocss
+        UnoCSS(),
 
-    // auto import api of lib
-    AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'pinia',
-        '@vueuse/core',
-        'vue-i18n',
-        {
-          'naive-ui': [
-            'useDialog',
-            'useMessage',
-            'useNotification',
-            'useLoadingBar',
-            'useModal',
-          ],
-        },
-      ],
-      include: [
-        /\.[tj]sx?$/,
-        /\.vue$/,
-        /\.vue\?vue/,
-        /\.md$/,
-      ],
-      dts: 'src/typings/auto-imports.d.ts',
-    }),
-
-    // auto import components lib
-    Components({
-      dts: 'src/typings/components.d.ts',
-      resolvers: [
-        IconsResolver({
-          prefix: false,
-          customCollections: [
-            'svg-icons',
-          ],
+        // auto import api of lib
+        AutoImport({
+            imports: [
+                'vue',
+                'vue-router',
+                'pinia',
+                '@vueuse/core',
+                'vue-i18n',
+                {
+                    'naive-ui': [
+                        'useDialog',
+                        'useMessage',
+                        'useNotification',
+                        'useLoadingBar',
+                        'useModal',
+                    ],
+                },
+            ],
+            include: [
+                /\.[tj]sx?$/,
+                /\.vue$/,
+                /\.vue\?vue/,
+                /\.md$/,
+            ],
+            dts: 'src/typings/auto-imports.d.ts',
         }),
-        NaiveUiResolver(),
-      ],
-    }),
 
-    // auto import iconify's icons
-    Icons({
-      defaultStyle: 'display:inline-block',
-      compiler: 'vue3',
-      customCollections: {
-        'svg-icons': FileSystemIconLoader(
-          'src/assets/svg-icons',
-          svg => svg.replace(/^<svg /, '<svg fill="currentColor" width="1.2em" height="1.2em"'),
-        ),
-      },
-    }),
-  ]
-  // use compression
-  if (env.VITE_BUILD_COMPRESS === 'Y') {
-    const { VITE_COMPRESS_TYPE = 'gzip' } = env
-    plugins.push(viteCompression({
-      algorithm: VITE_COMPRESS_TYPE, // 压缩算法
-    }))
-  }
+        // auto import components lib
+        Components({
+            dts: 'src/typings/components.d.ts',
+            resolvers: [
+                IconsResolver({
+                    prefix: false,
+                    customCollections: [
+                        'svg-icons',
+                    ],
+                }),
+                NaiveUiResolver(),
+            ],
+        }),
 
-  return plugins
+        // auto import iconify's icons
+        Icons({
+            defaultStyle: 'display:inline-block',
+            compiler: 'vue3',
+            customCollections: {
+                'svg-icons': FileSystemIconLoader(
+                    'src/assets/svg-icons',
+                    svg => svg.replace(/^<svg /, '<svg fill="currentColor" width="1.2em" height="1.2em"'),
+                ),
+            },
+        }),
+    ]
+    // use compression
+    if (env.VITE_BUILD_COMPRESS === 'Y') {
+        const { VITE_COMPRESS_TYPE = 'gzip' } = env
+        plugins.push(viteCompression({
+            algorithm: VITE_COMPRESS_TYPE, // 压缩算法
+        }))
+    }
+
+    return plugins
 }

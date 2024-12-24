@@ -1,21 +1,35 @@
-// eslint.config.js
 import antfu from '@antfu/eslint-config'
 
-// https://github.com/antfu/eslint-config
 export default antfu(
-  {
-    typescript: {
-      overrides: {
-        'perfectionist/sort-exports': 'off',
-        'ts/no-unused-expressions': ['error', { allowShortCircuit: true }],
-      },
+    {
+        stylistic: {
+            indent: 4,
+            overrides: {
+                'eslint-comments/no-unlimited-disable': 'off',
+            },
+        },
+        typescript: true,
+        vue: true,
+        rules: {
+            'vue/valid-v-slot': ['error', {
+                allowModifiers: true,
+            }],
+            'vue/no-mutating-props': ['error', {
+                shallowOnly: true,
+            }],
+            'vue/prop-name-casing': ['off'],
+            // 'vue/no-unused-refs': ['off'], // fix for vue 3.5
+            'ts/no-unsafe-function-type': ['off'],
+            'vue/no-unused-refs': ['off'],
+        },
+        jsonc: false,
+        yaml: false,
+        unocss: true,
+        ignores: [
+            '**/fixtures',
+            'vite-env.d.ts',
+            '**/*.d.ts',
+            '**/.d.ts',
+        ],
     },
-    vue: {
-      overrides: {
-        'vue/no-unused-refs': 'off', // 暂时关闭，等待vue-lint的分支合并
-        'vue/no-reserved-component-names': 'off',
-        'vue/component-definition-name-casing': 'off',
-      },
-    },
-  },
 )

@@ -4,27 +4,27 @@ import { useAppStore } from '@/store'
 const router = useRouter()
 const route = useRoute()
 const routes = computed(() => {
-  return route.matched
+    return route.matched
 })
 const appStore = useAppStore()
 </script>
 
 <template>
-  <TransitionGroup v-if="appStore.showBreadcrumb" name="list" tag="ul" style="display: flex; gap:1em;">
-    <n-el
-      v-for="(item) in routes"
-      :key="item.path"
-      tag="li" style="
+    <TransitionGroup v-if="appStore.showBreadcrumb" name="list" tag="ul" style="display: flex; gap:1em;">
+        <n-el
+            v-for="(item) in routes"
+            :key="item.path"
+            tag="li" style="
             color: var(--text-color-2);
             transition: 0.3s var(--cubic-bezier-ease-in-out);
           "
-      class="flex-center gap-2 cursor-pointer split"
-      @click="router.push(item.path)"
-    >
-      <nova-icon v-if="appStore.showBreadcrumbIcon" :icon="item.meta.icon" />
-      <span class="whitespace-nowrap">{{ $t(`route.${String(item.name)}`, item.meta.title) }}</span>
-    </n-el>
-  </TransitionGroup>
+            class="split flex-center cursor-pointer gap-2"
+            @click="router.push(item.path)"
+        >
+            <nova-icon v-if="appStore.showBreadcrumbIcon" :icon="item.meta.icon" />
+            <span class="whitespace-nowrap">{{ $t(`route.${String(item.name)}`, item.meta.title) }}</span>
+        </n-el>
+    </TransitionGroup>
 </template>
 
 <style lang="scss">

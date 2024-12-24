@@ -7,9 +7,9 @@ const isHttpProxy = import.meta.env.DEV && import.meta.env.VITE_HTTP_PROXY === '
 const { url } = generateProxyPattern(serviceConfig[import.meta.env.MODE])
 
 export const request = createAlovaInstance({
-  baseURL: isHttpProxy ? url.proxy : url.value,
+    baseURL: isHttpProxy ? url.proxy : url.value,
 })
 
 export const blankInstance = createAlovaInstance({
-  baseURL: '',
+    baseURL: '',
 })
