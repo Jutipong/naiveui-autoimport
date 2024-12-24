@@ -14,7 +14,7 @@ import type {
     ToolboxComponentOption,
     TooltipComponentOption,
 } from 'echarts/components'
-import { useAppStore } from '@/store'
+import { useAppStore } from '@/store/app'
 import { BarChart, LineChart, PieChart, RadarChart } from 'echarts/charts'
 
 import {

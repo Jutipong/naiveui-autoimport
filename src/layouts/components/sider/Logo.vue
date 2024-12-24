@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAppStore } from '@/store'
+import { useAppStore } from '@/store/app'
 
 const router = useRouter()
 const appStore = useAppStore()

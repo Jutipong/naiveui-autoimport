@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ToolbarNames } from 'md-editor-v3'
 
-import { useAppStore } from '@/store'
+import { useAppStore } from '@/store/app'
 
 import { MdEditor } from 'md-editor-v3'
 // https://imzbf.github.io/md-editor-v3/zh-CN/docs

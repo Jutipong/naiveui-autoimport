@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAppStore } from '@/store'
+import { useAppStore } from '@/store/app'
 import { NFlex } from 'naive-ui'
 import IconAuto from '~icons/icon-park-outline/laptop-computer'
 import IconMoon from '~icons/icon-park-outline/moon'

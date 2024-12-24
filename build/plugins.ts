@@ -8,9 +8,10 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import VueRouter from 'unplugin-vue-router/vite'
 import viteCompression from 'vite-plugin-compression'
-
 import VueDevTools from 'vite-plugin-vue-devtools'
+import Layouts from 'vite-plugin-vue-layouts'
 
 /**
  * @description: 设置vite插件配置
@@ -66,6 +67,15 @@ export function createVitePlugins(env: ImportMetaEnv) {
                 }),
                 NaiveUiResolver(),
             ],
+        }),
+
+        Layouts({
+            layoutsDirs: 'src/components/@layouts',
+            defaultLayout: 'default',
+        }),
+        VueRouter({
+            routesFolder: 'src/pages',
+            dts: 'src/typings/typed-router.d.ts',
         }),
 
         // auto import iconify's icons

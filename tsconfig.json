@@ -3,15 +3,45 @@
     "target": "ESNext",
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*",
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@images/*": [
+        "src/assets/images/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@core/*": [
+        "src/@core/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
     },
     "resolveJsonModule": true,
-    "types": ["node", "vite/client", "naive-ui/volar", "unplugin-icons/types/vue"],
+    "types": [
+      "node",
+      "vite/client",
+      "naive-ui/volar",
+      "unplugin-icons/types/vue",
+      "vite-plugin-vue-layouts/client",
+      "unplugin-vue-router/client"
+    ],
     "allowJs": true,
     "strict": true,
     "strictNullChecks": true,
@@ -22,5 +52,8 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
