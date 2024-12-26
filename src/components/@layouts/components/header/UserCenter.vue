@@ -42,7 +42,7 @@ const options: DropdownMixedOption[] = [
     {
         label: t('app.loginOut'),
         key: 'loginOut',
-        icon: () => (IconLogout),
+        icon: () => h(IconLogout),
     },
 ]
 
