@@ -14,9 +14,7 @@ const name = import.meta.env.VITE_APP_NAME
     >
         <svg-icons-logo class="text-1.5em" />
         <!-- v-show="!appStore.collapsed" -->
-        <span
-            class="overflow-hidden text-ellipsis whitespace-nowrap"
-        >{{ name }}</span>
+        <span class="overflow-hidden text-ellipsis whitespace-nowrap">{{ name }}</span>
     </div>
 </template>
 

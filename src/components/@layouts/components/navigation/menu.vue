@@ -2,6 +2,7 @@
 import type { MenuInst } from 'naive-ui'
 import { useAppStore } from '@/store/app'
 import { Menus } from '@/store/menus'
+import LogoComponent from './../navigation/logo.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -34,7 +35,7 @@ function handleMenuClick(key: string) {
         @update:value="handleMenuClick"
     >
         <template #header>
-            <Logo />
+            <LogoComponent />
         </template>
     </n-menu>
 </template>

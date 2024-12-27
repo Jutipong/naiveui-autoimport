@@ -58,7 +58,7 @@ export function createVitePlugins(env: ImportMetaEnv) {
 
         // auto import components lib
         Components({
-            dirs: ['src/components', '!/src/components/@layouts/**'],
+            dirs: ['src/components', '!src/components/@layouts'],
             dts: 'src/components.d.ts',
             resolvers: [
                 IconsResolver({
