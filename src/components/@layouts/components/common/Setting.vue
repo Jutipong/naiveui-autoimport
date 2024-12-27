@@ -13,6 +13,6 @@ const appStore = useAppStore()
                 </div>
             </CommonWrapper>
         </template>
-        <span>{{ $t('app.setting') }}</span>
+        <span>setting</span>
     </n-tooltip>
 </template>

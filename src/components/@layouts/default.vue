@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useAppStore } from '@/store/app'
-// import LogoComponent from './logo.vue'
-// import MenuComponent from './menu.vue'
 import BackTop from './components/common/back-top.vue'
 import SettingDrawer from './components/common/setting-drawer.vue'
 import Footer from './components/footer/index.vue'

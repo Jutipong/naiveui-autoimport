@@ -1,43 +1,40 @@
 <script setup lang="ts">
 import { useAppStore } from '@/store/app'
-import LayoutSelector from './layout-selector.vue'
 
 const appStore = useAppStore()
 
-const { t } = useI18n()
-
-const transitionSelectorOptions = computed(() => {
-    return [
+const transitionSelectorOptions = ref(
+    [
         {
-            label: t('app.transitionNull'),
+            label: 'Null',
             value: '',
         },
         {
-            label: t('app.transitionFadeSlide'),
+            label: 'FadeSlide',
             value: 'fade-slide',
         },
         {
-            label: t('app.transitionFadeBottom'),
+            label: 'FadeBottom',
             value: 'fade-bottom',
         },
         {
-            label: t('app.transitionFadeScale'),
+            label: 'FadeScale',
             value: 'fade-scale',
         },
         {
-            label: t('app.transitionZoomFade'),
+            label: 'ZoomFade',
             value: 'zoom-fade',
         },
         {
-            label: t('app.transitionZoomOut'),
+            label: 'ZoomOut',
             value: 'zoom-out',
         },
         {
-            label: t('app.transitionSoft'),
+            label: 'Soft',
             value: 'fade',
         },
-    ]
-})
+    ],
+)
 
 const palette = [
     '#ffb8b8',
@@ -60,13 +57,13 @@ const palette = [
 
 function resetSetting() {
     window.$dialog.warning({
-        title: t('app.resetSettingTitle'),
-        content: t('app.resetSettingContent'),
-        positiveText: t('common.confirm'),
-        negativeText: t('common.cancel'),
+        title: 'Reset settings',
+        content: 'Confirm to reset all settings?',
+        positiveText: 'confirm',
+        negativeText: 'cancel',
         onPositiveClick: () => {
             appStore.resetAlltheme()
-            window.$message.success(t('app.resetSettingMeaasge'))
+            window.$message.success('Reset successful')
         },
     })
 }
@@ -74,68 +71,54 @@ function resetSetting() {
 
 <template>
     <n-drawer v-model:show="appStore.showSetting" :width="360">
-        <n-drawer-content :title="t('app.systemSetting')" closable>
+        <n-drawer-content title="SystemSetting" closable>
             <n-space vertical>
-                <n-divider>{{ $t('app.layoutSetting') }}</n-divider>
-                <LayoutSelector v-model:value="appStore.layoutMode" />
-                <n-divider>{{ $t('app.themeSetting') }}</n-divider>
+                <n-divider>ThemeSetting</n-divider>
                 <n-space justify="space-between">
-                    {{ $t('app.colorWeak') }}
+                    ColorWeak
                     <n-switch :value="appStore.colorWeak" @update:value="appStore.toggleColorWeak" />
                 </n-space>
                 <n-space justify="space-between">
-                    {{ $t('app.blackAndWhite') }}
+                    BlackAndWhite
                     <n-switch :value="appStore.grayMode" @update:value="appStore.toggleGrayMode" />
                 </n-space>
                 <n-space align="center" justify="space-between">
-                    {{ $t('app.themeColor') }}
+                    ThemeColor
                     <n-color-picker
                         v-model:value="appStore.primaryColor" class="w-10em" :swatches="palette"
                         @update:value="appStore.setPrimaryColor"
                     />
                 </n-space>
                 <n-space align="center" justify="space-between">
-                    {{ $t('app.pageTransition') }}
+                    PageTransition
                     <n-select
                         v-model:value="appStore.transitionAnimation" class="w-10em"
                         :options="transitionSelectorOptions" @update:value="appStore.reloadPage"
                     />
                 </n-space>
 
-                <n-divider>{{ $t('app.interfaceDisplay') }}</n-divider>
+                <n-divider>InterfaceDisplay</n-divider>
                 <n-space justify="space-between">
-                    {{ $t('app.logoDisplay') }}
+                    LogoDisplay
                     <n-switch v-model:value="appStore.showLogo" />
                 </n-space>
                 <n-space justify="space-between">
-                    {{ $t('app.topProgress') }}
+                    TopProgress
                     <n-switch v-model:value="appStore.showProgress" />
                 </n-space>
                 <n-space justify="space-between">
-                    {{ $t('app.multitab') }}
-                    <n-switch v-model:value="appStore.showTabs" />
-                </n-space>
-                <n-space justify="space-between">
-                    {{ $t('app.bottomCopyright') }}
+                    BottomCopyright
                     <n-switch v-model:value="appStore.showFooter" />
                 </n-space>
                 <n-space justify="space-between">
-                    {{ $t('app.breadcrumb') }}
+                    Breadcrumb
                     <n-switch v-model:value="appStore.showBreadcrumb" />
-                </n-space>
-                <n-space justify="space-between">
-                    {{ $t('app.BreadcrumbIcon') }}
-                    <n-switch v-model:value="appStore.showBreadcrumbIcon" />
-                </n-space>
-                <n-space justify="space-between">
-                    {{ $t('app.watermake') }}
-                    <n-switch v-model:value="appStore.showWatermark" />
                 </n-space>
             </n-space>
 
             <template #footer>
                 <n-button type="error" @click="resetSetting">
-                    {{ $t('app.reset') }}
+                    reset
                 </n-button>
             </template>
         </n-drawer-content>

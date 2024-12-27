@@ -3,18 +3,11 @@ import type { MenuOption } from 'naive-ui'
 import { useAppStore } from '@/store/app'
 import { Menus } from '@/store/menus'
 
-// const menus = Menus()
-// const router = useRouter()
 const route = useRoute()
-// const routes = computed(() => {
-//     // console.log(route)
-//     // return route.matched
-//     return menus
-// })
 
-const routes = ref<Array<MenuOption>>(Menus().filter(i => i.key === route.path))
+const routes = ref<MenuOption[]>(Menus().filter(i => i.key === route.path))
 watch(() => route.path, () => {
-    routes.value = Menus().filter(i => i.key === route.path)
+    // routes.value = Menus().filter(i => i.key === route.path)
 })
 
 const appStore = useAppStore()
