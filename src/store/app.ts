@@ -4,7 +4,6 @@ import { set } from 'radash'
 import themeConfig from './theme.json'
 
 export type TransitionAnimation = '' | 'fade-slide' | 'fade-bottom' | 'fade-scale' | 'zoom-fade' | 'zoom-out'
-export type LayoutMode = 'leftMenu'
 
 const docEle = ref(document.documentElement)
 
