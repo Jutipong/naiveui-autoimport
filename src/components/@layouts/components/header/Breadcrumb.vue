@@ -7,7 +7,7 @@ const route = useRoute()
 
 const routes = ref<MenuOption[]>(Menus().filter(i => i.key === route.path))
 watch(() => route.path, () => {
-    // routes.value = Menus().filter(i => i.key === route.path)
+    routes.value = Menus().filter(i => i.key === route.path)
 })
 
 const appStore = useAppStore()
@@ -24,7 +24,7 @@ const appStore = useAppStore()
             tag="li" style=" color: var(--text-color-2); transition: 0.3s var(--cubic-bezier-ease-in-out);"
             class="split flex-center cursor-pointer gap-2"
         >
-            <nova-icon v-if="appStore.showBreadcrumbIcon" :icon="typeof item.icon === 'string' ? item.icon : undefined" />
+            <!-- <nova-icon :icon="typeof item.icon === 'string' ? item.icon : undefined" /> -->
             <span class="whitespace-nowrap">{{ `${String(item.name)}` }}</span>
         </n-el>
     </TransitionGroup>
