@@ -6,8 +6,6 @@ import HeaderComponent from './../header/index.vue'
 import LogoComponent from './logo.vue'
 import MenuComponent from './menu.vue'
 
-// const routeStore = { cacheRoutes: 'map' }
-
 const appStore = useAppStore()
 </script>
 
@@ -52,11 +50,7 @@ const appStore = useAppStore()
                         mode="out-in"
                     >
                         <!-- <keep-alive :include="routeStore.cacheRoutes"> -->
-                        <component
-                            :is="Component"
-                            v-if="appStore.loadFlag"
-                            :key="route.fullPath"
-                        />
+                        <component :is="Component" v-if="appStore.loadFlag" :key="route.fullPath" />
                         <!-- </keep-alive> -->
                     </transition>
                 </router-view>

@@ -5,5 +5,5 @@ import Navigation from './components/navigation/index.vue'
 
 <template>
     <SettingDrawer />
-    <component :is="Navigation" />
+    <Navigation />
 </template>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-// import { useAppStore } from '@/store/auth'
+import { useAppStore } from '@/store/app'
 
 const router = useRouter()
-// const appStore = useAppStore()
+const appStore = useAppStore()
 
 const name = import.meta.env.VITE_APP_NAME
 </script>
@@ -13,8 +13,7 @@ const name = import.meta.env.VITE_APP_NAME
         @click="router.push('/')"
     >
         <svg-icons-logo class="text-1.5em" />
-        <!-- v-show="!appStore.collapsed" -->
-        <span class="overflow-hidden text-ellipsis whitespace-nowrap">{{ name }}</span>
+        <span v-show="!appStore.collapsed" class="overflow-hidden text-ellipsis whitespace-nowrap">{{ name }}</span>
     </div>
 </template>
 
