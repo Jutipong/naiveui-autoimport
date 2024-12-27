@@ -3,38 +3,36 @@ import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
 
-const transitionSelectorOptions = ref(
-    [
-        {
-            label: 'Null',
-            value: '',
-        },
-        {
-            label: 'FadeSlide',
-            value: 'fade-slide',
-        },
-        {
-            label: 'FadeBottom',
-            value: 'fade-bottom',
-        },
-        {
-            label: 'FadeScale',
-            value: 'fade-scale',
-        },
-        {
-            label: 'ZoomFade',
-            value: 'zoom-fade',
-        },
-        {
-            label: 'ZoomOut',
-            value: 'zoom-out',
-        },
-        {
-            label: 'Soft',
-            value: 'fade',
-        },
-    ],
-)
+const transitionSelectorOptions = [
+    {
+        label: 'Null',
+        value: '',
+    },
+    {
+        label: 'FadeSlide',
+        value: 'fade-slide',
+    },
+    {
+        label: 'FadeBottom',
+        value: 'fade-bottom',
+    },
+    {
+        label: 'FadeScale',
+        value: 'fade-scale',
+    },
+    {
+        label: 'ZoomFade',
+        value: 'zoom-fade',
+    },
+    {
+        label: 'ZoomOut',
+        value: 'zoom-out',
+    },
+    {
+        label: 'Soft',
+        value: 'fade',
+    },
+]
 
 const palette = [
     '#ffb8b8',
