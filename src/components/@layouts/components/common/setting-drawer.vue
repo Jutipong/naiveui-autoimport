@@ -89,10 +89,7 @@ function resetSetting() {
                 </n-space>
                 <n-space align="center" justify="space-between">
                     PageTransition
-                    <n-select
-                        v-model:value="appStore.transitionAnimation" class="w-10em"
-                        :options="transitionSelectorOptions" @update:value="appStore.reloadPage"
-                    />
+                    <n-select v-model:value="appStore.transitionAnimation" class="w-10em" :options="transitionSelectorOptions" />
                 </n-space>
 
                 <n-divider>InterfaceDisplay</n-divider>

@@ -23,7 +23,7 @@ const appStore = useAppStore()
             <div class="flex flex-1 flex-col p-16px p-t-76px" :class="{ 'p-b-56px': appStore.showFooter }">
                 <router-view v-slot="{ Component, route }" class="flex-1">
                     <transition :name="appStore.transitionAnimation" mode="out-in">
-                        <component :is="Component" v-if="appStore.loadFlag" :key="route.fullPath" />
+                        <component :is="Component" :key="route.fullPath" />
                     </transition>
                 </router-view>
             </div>
