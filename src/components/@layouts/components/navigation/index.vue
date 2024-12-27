@@ -25,7 +25,6 @@ function handleMenuClick(key: string) {
 
 <template>
     <n-layout-sider
-        v-if="!appStore.contentFullScreen"
         bordered
         :collapsed="appStore.collapsed"
         collapse-mode="width"

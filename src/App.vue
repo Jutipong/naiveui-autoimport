@@ -19,7 +19,6 @@ const appStore = useAppStore()
     >
         <naive-provider>
             <router-view />
-            <Watermark :show-watermark="appStore.showWatermark" />
         </naive-provider>
     </n-config-provider>
 </template>

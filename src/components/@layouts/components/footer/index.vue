@@ -6,7 +6,7 @@ const appStore = useAppStore()
 
 <template>
     <n-layout-footer
-        v-if="appStore.showFooter && !appStore.contentFullScreen"
+        v-if="appStore.showFooter"
         bordered
         position="absolute"
         class="h-40px flex-center"

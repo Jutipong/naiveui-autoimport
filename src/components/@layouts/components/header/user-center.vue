@@ -74,15 +74,8 @@ function handleSelect(key: string | number) {
 </script>
 
 <template>
-    <n-dropdown
-        trigger="click"
-        :options="options"
-        @select="handleSelect"
-    >
-        <n-avatar
-            round
-        >
-            :src="userInfo?.avatar"
+    <n-dropdown trigger="click" :options="options" @select="handleSelect">
+        <n-avatar round>
             <template #fallback>
                 <div class="wh-full flex-center">
                     <icon-park-outline-user />
@@ -91,5 +84,3 @@ function handleSelect(key: string | number) {
         </n-avatar>
     </n-dropdown>
 </template>
-
-<style scoped></style>

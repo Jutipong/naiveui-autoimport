@@ -29,16 +29,11 @@ export const useAppStore = defineStore('app-store', {
             colorWeak: false,
             loadFlag: true,
             showLogo: true,
-            showTabs: true,
             showFooter: true,
             showProgress: true,
             showBreadcrumb: true,
-            showBreadcrumbIcon: true,
-            showWatermark: false,
             showSetting: false,
             transitionAnimation: 'fade-slide' as TransitionAnimation,
-            layoutMode: 'leftMenu' as LayoutMode,
-            contentFullScreen: false,
         }
     },
     getters: {
@@ -53,7 +48,6 @@ export const useAppStore = defineStore('app-store', {
         },
     },
     actions: {
-    // 重置所有设置
         resetAlltheme() {
             this.theme = themeConfig
             this.primaryColor = '#18a058'
@@ -62,16 +56,10 @@ export const useAppStore = defineStore('app-store', {
             this.colorWeak = false
             this.loadFlag = true
             this.showLogo = true
-            this.showTabs = false
             this.showFooter = true
             this.showBreadcrumb = true
-            this.showBreadcrumbIcon = true
-            this.showWatermark = false
             this.transitionAnimation = 'fade-slide'
-            this.layoutMode = 'leftMenu'
-            this.contentFullScreen = false
 
-            // 重置所有配色
             this.setPrimaryColor(this.primaryColor)
         },
         setAppLang(lang: App.lang) {
@@ -79,7 +67,6 @@ export const useAppStore = defineStore('app-store', {
             local.set('lang', lang)
             this.lang = lang
         },
-        /* 设置主题色 */
         setPrimaryColor(color: string) {
             const brightenColor = colord(color).lighten(0.05).toHex()
             const darkenColor = colord(color).darken(0.05).toHex()
