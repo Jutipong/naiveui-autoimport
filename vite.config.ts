@@ -52,7 +52,6 @@ export default defineConfig(({ mode }) => {
                         'vue-router': ['useRouter', 'useRoute'],
                         'pinia': ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
                         '@vueuse/core': ['watchDebounced', 'useColorMode'],
-                        // '@iconify/vue': ['Icon'],
                     },
                 ],
                 include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
