@@ -8,7 +8,7 @@
                     <icon-park-outline-to-top />
                 </div>
             </template>
-            <span>{{ $t('app.backTop') }}</span>
+            <span>Back to top</span>
         </n-tooltip>
     </n-back-top>
 </template>

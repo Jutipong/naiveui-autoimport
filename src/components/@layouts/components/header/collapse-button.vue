@@ -12,7 +12,7 @@ const appStore = useAppStore()
                 <icon-park-outline-menu-fold v-else />
             </CommonWrapper>
         </template>
-        <span>{{ $t('app.toggleSider') }}</span>
+        <span>Toggle sidebar</span>
     </n-tooltip>
 </template>
 

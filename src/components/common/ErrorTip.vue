@@ -30,7 +30,7 @@ const router = useRouter()
             type="primary"
             @click="router.push('/')"
         >
-            {{ $t('app.backHome') }}
+            <span>Back to the homepage</span>
         </n-button>
     </div>
 </template>

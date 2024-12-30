@@ -60,7 +60,7 @@ export default defineConfig(({ mode }) => {
             }),
             VueRouter({
                 routesFolder: 'src/pages',
-                dts: 'src/typings/typed-router.d.ts',
+                dts: 'src/typed-router.d.ts',
             }),
             Icons({
                 defaultStyle: 'display:inline-block',
