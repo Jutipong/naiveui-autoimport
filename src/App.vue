@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // import { naiveI18nOptions } from '@/utils'
 import { darkTheme } from 'naive-ui'
-import { useAppStore } from './store/app'
+import { useAppStore } from './stores/app'
 
 const appStore = useAppStore()
 

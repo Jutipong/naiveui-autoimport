@@ -1,50 +1,15 @@
 <script setup lang="ts">
-import { useAppStore } from '@/store/app'
-import { NFlex } from 'naive-ui'
-import IconAuto from '~icons/icon-park-outline/laptop-computer'
-import IconMoon from '~icons/icon-park-outline/moon'
-import IconSun from '~icons/icon-park-outline/sun-one'
-
 const appStore = useAppStore()
-
-const options = computed(() => {
-    return [
-        {
-            label: 'Light',
-            value: 'light',
-            icon: IconSun,
-        },
-        {
-            label: 'Dark',
-            value: 'dark',
-            icon: IconMoon,
-        },
-        {
-            label: 'System',
-            value: 'auto',
-            icon: IconAuto,
-        },
-    ]
-})
-
-function renderLabel(option: any) {
-    return h(NFlex, { align: 'center' }, {
-        default: () => [
-            h(option.icon),
-            option.label,
-        ],
-    })
-}
 </script>
 
 <template>
-    <n-popselect :value="appStore.storeColorMode" :render-label="renderLabel" :options="options" trigger="click" @update:value="appStore.setColorMode">
-        <CommonWrapper>
-            <icon-park-outline-moon v-if="appStore.storeColorMode === 'dark'" />
-            <icon-park-outline-sun-one v-if="appStore.storeColorMode === 'light'" />
-            <icon-park-outline-laptop-computer v-if="appStore.storeColorMode === 'auto'" />
-        </CommonWrapper>
-    </n-popselect>
+    <n-tooltip placement="bottom" trigger="hover">
+        <template #trigger>
+            <CommonWrapper>
+                <icon-park-outline-moon v-if="appStore.storeColorMode === 'dark'" @click="appStore.setColorMode('light')" />
+                <icon-park-outline-sun-one v-if="appStore.storeColorMode === 'light'" @click="appStore.setColorMode('dark')" />
+            </CommonWrapper>
+        </template>
+        <span>{{ appStore.storeColorMode === 'dark' ? 'Dark' : 'Light' }}</span>
+    </n-tooltip>
 </template>
-
-<style scoped></style>

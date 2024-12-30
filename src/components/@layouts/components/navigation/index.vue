@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { MenuInst } from 'naive-ui'
-import { useAppStore } from '@/store/app'
-import { Menus } from '@/store/menus'
+import { useAppStore } from '@/stores/app'
+import { Menus } from '@/stores/menus'
 import Logo from './logo.vue'
 
 const appStore = useAppStore()

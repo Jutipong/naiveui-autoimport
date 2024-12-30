@@ -1,3 +1,4 @@
+import { createApp } from 'vue'
 import AppVue from './App.vue'
 import { piniaConfig } from './utils/config/pinia'
 import { routerConfig } from './utils/config/router'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { MenuOption } from 'naive-ui'
-import { useAppStore } from '@/store/app'
-import { Menus } from '@/store/menus'
+import { useAppStore } from '@/stores/app'
+import { Menus } from '@/stores/menus'
 
 const route = useRoute()
 const menu = Menus()

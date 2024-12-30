@@ -1,9 +1,12 @@
-import { defineConfig, presetAttributify, presetUno, transformerVariantGroup } from 'unocss'
-
-// https://github.com/unocss/unocss
+import { defineConfig, presetAttributify, presetIcons, presetUno, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
-    presets: [presetUno({ dark: 'class' }), presetAttributify()],
+    presets: [
+        presetUno({ dark: 'class' }),
+        presetAttributify(),
+        presetUno(),
+        presetIcons(),
+    ],
     shortcuts: {
         'wh-full': 'w-full h-full',
         'flex-center': 'flex justify-center items-center',

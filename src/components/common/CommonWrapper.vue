@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
     <n-el tag="div" class="el cursor-pointer rounded p-3">
         <n-flex align="center" :wrap="false" class="h-full">
