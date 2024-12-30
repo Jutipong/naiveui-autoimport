@@ -1,28 +1,26 @@
 <script setup lang="ts">
 import type { FormInst } from 'naive-ui'
-import { useAuthStore } from '@/store'
-import { local } from '@/utils'
+// import { useAuthStore } from '@/store/index'
 
 const emit = defineEmits(['update:modelValue'])
 
-const authStore = useAuthStore()
+// const authStore = useAuthStore()
 
 function toOtherForm(type: any) {
     emit('update:modelValue', type)
 }
 
-const { t } = useI18n()
 const rules = computed(() => {
     return {
         account: {
             required: true,
             trigger: 'blur',
-            message: t('login.accountRuleTip'),
+            message: 'Please enter account',
         },
         pwd: {
             required: true,
             trigger: 'blur',
-            message: t('login.passwordRuleTip'),
+            message: 'Please enter password',
         },
     }
 })
@@ -40,13 +38,13 @@ function handleLogin() {
             return
 
         isLoading.value = true
-        const { account, pwd } = formValue.value
+        // const { account, pwd } = formValue.value
 
-        if (isRemember.value)
-            local.set('loginAccount', { account, pwd })
-        else local.remove('loginAccount')
+        // if (isRemember.value)
+        //     local.set('loginAccount', { account, pwd })
+        // else local.remove('loginAccount')
 
-        await authStore.login(account, pwd)
+        // await authStore.login(account, pwd)
         isLoading.value = false
     })
 }
@@ -54,7 +52,8 @@ onMounted(() => {
     checkUserAccount()
 })
 function checkUserAccount() {
-    const loginAccount = local.get('loginAccount')
+    // const loginAccount = local.get('loginAccount')
+    const loginAccount = ''
     if (!loginAccount)
         return
 

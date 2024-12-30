@@ -3,23 +3,22 @@ const emit = defineEmits(['update:modelValue'])
 function toLogin() {
     emit('update:modelValue', 'login')
 }
-const { t } = useI18n()
 
 const rules = {
     account: {
         required: true,
         trigger: 'blur',
-        message: t('login.accountRuleTip'),
+        message: 'Please enter account',
     },
     pwd: {
         required: true,
         trigger: 'blur',
-        message: t('login.passwordRuleTip'),
+        message: 'Please enter password',
     },
     rePwd: {
         required: true,
         trigger: 'blur',
-        message: t('login.checkPasswordRuleTip'),
+        message: 'Please confirm password again',
     },
 }
 const formValue = ref({

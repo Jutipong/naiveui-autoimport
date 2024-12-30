@@ -5,8 +5,8 @@ import { Menus } from '@/store/menus'
 
 const route = useRoute()
 const menu = Menus()
-const routes = ref<MenuOption[]>([])
-routes.value = menu.filter(i => i.key === route.path)
+const routes = ref<MenuOption[]>([] as MenuOption[])
+routes.value = menu?.filter(i => i.key === route.path)
 
 watch(() => route.path, () => {
     routes.value = menu.filter(i => i.key === route.path)

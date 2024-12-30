@@ -5,14 +5,13 @@ const emit = defineEmits(['update:modelValue'])
 function toLogin() {
     emit('update:modelValue', 'login')
 }
-const { t } = useI18n()
 
 const rules = computed(() => {
     return {
         account: {
             required: true,
             trigger: 'blur',
-            message: t('login.resetPasswordRuleTip'),
+            message: 'Please enter your account/mobile phone number',
         },
     }
 })

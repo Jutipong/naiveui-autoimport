@@ -5,24 +5,22 @@ import IconAuto from '~icons/icon-park-outline/laptop-computer'
 import IconMoon from '~icons/icon-park-outline/moon'
 import IconSun from '~icons/icon-park-outline/sun-one'
 
-const { t } = useI18n()
-
 const appStore = useAppStore()
 
 const options = computed(() => {
     return [
         {
-            label: t('app.light'),
+            label: 'Light',
             value: 'light',
             icon: IconSun,
         },
         {
-            label: t('app.dark'),
+            label: 'Dark',
             value: 'dark',
             icon: IconMoon,
         },
         {
-            label: t('app.system'),
+            label: 'System',
             value: 'auto',
             icon: IconAuto,
         },

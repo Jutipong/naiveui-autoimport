@@ -6,13 +6,11 @@ import IconGithub from '~icons/icon-park-outline/github'
 import IconLogout from '~icons/icon-park-outline/logout'
 import IconUser from '~icons/icon-park-outline/user'
 
-const { t } = useI18n()
-
 const router = useRouter()
 
 const options: DropdownMixedOption[] = [
     {
-        label: t('app.userCenter'),
+        label: 'Personal center',
         key: 'userCenter',
         icon: () => h(IconUser),
     },
@@ -40,7 +38,7 @@ const options: DropdownMixedOption[] = [
         key: 'd1',
     },
     {
-        label: t('app.loginOut'),
+        label: 'Login out',
         key: 'loginOut',
         icon: () => h(IconLogout),
     },
@@ -49,10 +47,10 @@ const options: DropdownMixedOption[] = [
 function handleSelect(key: string | number) {
     if (key === 'loginOut') {
         window.$dialog?.info({
-            title: t('app.loginOutTitle'),
-            content: t('app.loginOutContent'),
-            positiveText: t('common.confirm'),
-            negativeText: t('common.cancel'),
+            title: 'Sign out',
+            content: 'Confirm to log out of current account?',
+            positiveText: 'Confirm',
+            negativeText: 'Cancel',
             onPositiveClick: () => {
                 // logout()
                 // console.log('logout')

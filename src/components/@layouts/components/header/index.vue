@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import CollapseButton from '../header/collapse-button.vue'
 import Setting from './../common/setting.vue'
-import Breadcrumb from './../header/breadcrumb.vue'
+import Breadcrumb from './breadcrumb.vue'
 import userCenter from './user-center.vue'
 </script>
 
