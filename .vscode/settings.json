@@ -2,7 +2,10 @@
   "cSpell.words": [
     "pinia",
     "sider",
-    "VITE"
+    "unocss",
+    "unplugin",
+    "VITE",
+    "vueuse"
   ],
   "editor.fontLigatures": true,
   "editor.smoothScrolling": true,
