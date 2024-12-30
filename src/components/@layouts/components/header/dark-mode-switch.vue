@@ -5,10 +5,8 @@ const appStore = useAppStore()
 <template>
     <n-tooltip placement="bottom" trigger="hover">
         <template #trigger>
-            <CommonWrapper>
-                <icon-park-outline-moon v-if="appStore.storeColorMode === 'dark'" @click="appStore.setColorMode('light')" />
-                <icon-park-outline-sun-one v-if="appStore.storeColorMode === 'light'" @click="appStore.setColorMode('dark')" />
-            </CommonWrapper>
+            <icon-park-outline-moon v-if="appStore.storeColorMode === 'dark'" cursor-pointer @click="appStore.setColorMode('light')" />
+            <icon-park-outline-sun-one v-if="appStore.storeColorMode === 'light'" cursor-pointer @click="appStore.setColorMode('dark')" />
         </template>
         <span>{{ appStore.storeColorMode === 'dark' ? 'Dark' : 'Light' }}</span>
     </n-tooltip>
