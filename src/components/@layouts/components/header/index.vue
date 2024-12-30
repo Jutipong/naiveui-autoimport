@@ -3,7 +3,6 @@ import CollapseButton from '../header/collapse-button.vue'
 import Setting from './../common/setting.vue'
 import Breadcrumb from './breadcrumb.vue'
 import DarkModeSwitch from './dark-mode-switch.vue'
-import userCenter from './user-center.vue'
 </script>
 
 <template>
@@ -16,7 +15,6 @@ import userCenter from './user-center.vue'
             <div class="h-full flex-y-center gap-1 p-x-xl">
                 <DarkModeSwitch />
                 <Setting />
-                <userCenter />
             </div>
         </div>
     </n-layout-header>
