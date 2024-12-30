@@ -2,6 +2,7 @@
 import CollapseButton from '../header/collapse-button.vue'
 import Setting from './../common/setting.vue'
 import Breadcrumb from './breadcrumb.vue'
+import DarkModeSwitch from './dark-mode-switch.vue'
 import userCenter from './user-center.vue'
 </script>
 
