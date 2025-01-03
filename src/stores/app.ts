@@ -1,6 +1,5 @@
 import type { GlobalThemeOverrides } from 'naive-ui'
 import { colord } from 'colord'
-import { set } from 'radash'
 import themeConfig from './theme.json'
 
 export type TransitionAnimation = '' | 'fade-slide' | 'fade-bottom' | 'fade-scale' | 'zoom-fade' | 'zoom-out'
@@ -53,10 +52,11 @@ export const useAppStore = defineStore('app-store', {
         setPrimaryColor(color: string) {
             const brightenColor = colord(color).lighten(0.05).toHex()
             const darkenColor = colord(color).darken(0.05).toHex()
-            set(this.theme, 'common.primaryColor', color)
-            set(this.theme, 'common.primaryColorHover', brightenColor)
-            set(this.theme, 'common.primaryColorPressed', darkenColor)
-            set(this.theme, 'common.primaryColorSuppl', brightenColor)
+
+            this.theme.common!.primaryColor = color
+            this.theme.common!.primaryColorHover = brightenColor
+            this.theme.common!.primaryColorPressed = darkenColor
+            this.theme.common!.primaryColorSuppl = brightenColor
         },
         setColorMode(mode: 'light' | 'dark' | 'auto') {
             store.value = mode
