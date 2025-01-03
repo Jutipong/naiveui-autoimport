@@ -1,6 +1,7 @@
 @import './reset.css';
 @import './transition.css';
 @import './naive.css';
+@import './custom.css';
 
 html,
 body,
@@ -17,10 +18,4 @@ body,
 
 .drag-handle {
   cursor: move;
-}
-
-/* set iconify icon size */
-[class^="i-"] {
-  width: 1.05rem !important;
-  height: 1.05rem !important;
 }
