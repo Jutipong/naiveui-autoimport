@@ -62,6 +62,7 @@ export function Menus() {
         },
         {
             label: 'Demo',
+            icon: renderIcon('carbon:demo'),
             key: '/demo',
             children: [
                 {
