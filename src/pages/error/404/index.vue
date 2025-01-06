@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const router = useRouter()
+</script>
 
 <template>
-    <ErrorTip type="404" />
-</template>
+    <div class="h-full flex-col-center">
+        <img src="@/assets/svg/error-404.svg" alt="" class="w-1/3">
 
-<style lang="scss" scoped></style>
+        <n-button type="primary" @click="router.push('/')">
+            <span>Back to the homepage</span>
+        </n-button>
+    </div>
+</template>

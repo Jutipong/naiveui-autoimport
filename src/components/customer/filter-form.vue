@@ -14,35 +14,33 @@ const state = reactive({
 </script>
 
 <template>
-    <div>
-        <n-card>
-            <n-form ref="formRef" :model="state" label-placement="left" inline :show-feedback="false">
-                <n-flex>
-                    <n-form-item label="Band" path="condition_1">
-                        <n-input v-model:value="state.search.brand" placeholder="请输入" />
-                    </n-form-item>
-                    <n-form-item label="Title" path="condition_2">
-                        <n-input v-model:value="state.search.title" placeholder="请输入" />
-                    </n-form-item>
-                    <n-form-item label="Status" path="condition_3">
-                        <n-input v-model:value="state.search.status" placeholder="请输入" />
-                    </n-form-item>
-                    <n-flex class="ml-auto">
-                        <NButton type="primary">
-                            <template #icon>
-                                <icon-park-outline-search />
-                            </template>
-                            Search
-                        </NButton>
-                        <NButton strong secondary>
-                            <template #icon>
-                                <icon-park-outline-redo />
-                            </template>
-                            Clear
-                        </NButton>
-                    </n-flex>
+    <n-card>
+        <n-form ref="formRef" :model="state" label-placement="left" inline :show-feedback="false">
+            <n-flex>
+                <n-form-item label="Band" path="condition_1">
+                    <n-input v-model:value="state.search.brand" placeholder="请输入" />
+                </n-form-item>
+                <n-form-item label="Title" path="condition_2">
+                    <n-input v-model:value="state.search.title" placeholder="请输入" />
+                </n-form-item>
+                <n-form-item label="Status" path="condition_3">
+                    <n-input v-model:value="state.search.status" placeholder="请输入" />
+                </n-form-item>
+                <n-flex class="ml-auto">
+                    <NButton type="primary">
+                        <template #icon>
+                            <icon-park-outline-search />
+                        </template>
+                        Search
+                    </NButton>
+                    <NButton strong secondary>
+                        <template #icon>
+                            <icon-park-outline-redo />
+                        </template>
+                        Clear
+                    </NButton>
                 </n-flex>
-            </n-form>
-        </n-card>
-    </div>
+            </n-flex>
+        </n-form>
+    </n-card>
 </template>

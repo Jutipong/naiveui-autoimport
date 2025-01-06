@@ -5,10 +5,10 @@ const appStore = useAppStore()
 </script>
 
 <template>
-    <CommonCommonWrapper @click="appStore.toggleCollapse()">
+    <CommonWrapper @click="appStore.toggleCollapse()">
         <icon-park-outline-menu-unfold v-if="appStore.collapsed" />
         <icon-park-outline-menu-fold v-else />
-    </CommonCommonWrapper>
+    </CommonWrapper>
 </template>
 
 <style scoped></style>

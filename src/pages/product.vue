@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <CommonCommonWrapper>
+    <NSpace vertical size="large">
         <CustomerFilterForm />
-    </CommonCommonWrapper>
+    </NSpace>
 </template>
 
 <style scoped></style>
