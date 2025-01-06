@@ -60,7 +60,17 @@ export function Menus() {
             key: '/home',
             icon: renderIcon('icon-park-outline:home'),
         },
-
+        {
+            label: 'Demo',
+            key: '/demo',
+            children: [
+                {
+                    title: 'product',
+                    key: '/product',
+                    icon: renderIcon('carbon:product'),
+                },
+            ],
+        },
         {
             name: 'demo403',
             title: '403',
