@@ -102,9 +102,9 @@ export default defineConfig(({ mode }) => {
             },
             extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
         },
-        optimizeDeps: {
-            include: ['echarts', 'md-editor-v3', 'quill'],
-        },
+        // optimizeDeps: {
+        //     include: ['echarts', 'md-editor-v3', 'quill'],
+        // },
         css: { preprocessorOptions: { scss: { api: 'modern' } } },
     }
 })
