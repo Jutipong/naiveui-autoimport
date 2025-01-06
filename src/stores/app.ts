@@ -25,6 +25,9 @@ export const useAppStore = defineStore('app-store', {
             showBreadcrumb: true,
             showSetting: false,
             transitionAnimation: 'fade-slide' as TransitionAnimation,
+            // for new
+            loadings: 0,
+            isProgressLoading: false,
         }
     },
     getters: {
@@ -33,6 +36,10 @@ export const useAppStore = defineStore('app-store', {
         },
         colorMode() {
             return store.value === 'auto' ? system.value : store.value
+        },
+        // for new
+        isLoading(): boolean {
+            return this.loadings > 0
         },
     },
     actions: {
@@ -71,6 +78,16 @@ export const useAppStore = defineStore('app-store', {
         toggleGrayMode() {
             docEle.value.classList.toggle('gray-mode')
             this.grayMode = docEle.value.classList.contains('gray-mode')
+        },
+        // for new
+        setLoading() {
+            this.loadings++
+        },
+        unLoading() {
+            this.loadings--
+        },
+        resetLoading() {
+            this.loadings = 0
         },
     },
     persist: {

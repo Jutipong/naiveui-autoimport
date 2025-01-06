@@ -7,14 +7,13 @@ const { token } = useAuthStore()
 
 function dateTransformer(data: any): any {
     if (data instanceof Date) {
-        // const res = data.toLocaleString()
         const dateObj = new Date(data)
         dateObj.setHours(dateObj.getHours() + 7)
         const res = dateObj.toISOString()
         return res
     }
 
-    if (Array.isArray(data)) {
+    if (_isArray(data)) {
         return data.map(dateTransformer)
     }
 
