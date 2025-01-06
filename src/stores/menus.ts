@@ -45,77 +45,42 @@ import { renderIcon } from '@/utils'
 // }
 
 export function Menus() {
-    // const menus: AppRoute.RowRoute[] = [
-    //     {
-    //         name: 'home',
-    //         path: '/',
-    //         title: 'Title Home',
-    //         requiresAuth: true,
-    //         icon: 'icon-park-outline:home',
-    //         componentPath: '/home/index.vue',
-    //         id: 1,
-    //         pid: null,
-    //     },
-    //     {
-    //         name: 'error',
-    //         path: '/error',
-    //         title: '异常页',
-    //         requiresAuth: true,
-    //         icon: 'icon-park-outline:error-computer',
-    //         menuType: 'dir',
-    //         componentPath: null,
-    //         id: 31,
-    //         pid: null,
-    //     },
-    //     {
-    //         name: 'demo403',
-    //         path: '/error/403',
-    //         title: '403',
-    //         requiresAuth: true,
-    //         icon: 'carbon:error',
-    //         order: 3,
-    //         componentPath: '/error/403/index.vue',
-    //         id: 32,
-    //         pid: 31,
-    //     },
-    //     {
-    //         name: 'demo404',
-    //         path: '/error/404',
-    //         title: '404',
-    //         requiresAuth: true,
-    //         icon: 'icon-park-outline:error',
-    //         order: 2,
-    //         componentPath: '/error/404/index.vue',
-    //         id: 33,
-    //         pid: 31,
-    //     },
-    //     {
-    //         name: 'demo500',
-    //         path: '/error/500',
-    //         title: '500',
-    //         requiresAuth: true,
-    //         icon: 'carbon:data-error',
-    //         order: 1,
-    //         componentPath: '/error/500/index.vue',
-    //         id: 34,
-    //         pid: 31,
-    //     },
-    // ]
-
     const menuOption: MenuOption[] = [
         {
             label: 'Index',
             name: 'Index',
-            title: 'Title Index',
+            title: 'Index',
             key: '/',
             icon: renderIcon('icon-park-outline:rotate-one'),
         },
         {
             label: 'Title Home',
             name: 'Home',
-            title: 'Title Home',
+            title: 'Home',
             key: '/home',
             icon: renderIcon('icon-park-outline:home'),
+        },
+
+        {
+            name: 'demo403',
+            title: '403',
+            requiresAuth: true,
+            icon: renderIcon('carbon:error'),
+            key: '/error/403',
+        },
+        {
+            name: 'demo404',
+            key: '/error/404',
+            title: '404',
+            requiresAuth: true,
+            icon: renderIcon('icon-park-outline:error'),
+        },
+        {
+            name: 'demo500',
+            key: '/error/500',
+            title: '500',
+            requiresAuth: true,
+            icon: renderIcon('carbon:data-error'),
         },
     ]
 
