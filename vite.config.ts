@@ -61,6 +61,7 @@ export default defineConfig(({ mode }) => {
             Components({
                 dirs: ['src/components', '!./src/components/@layouts/**'],
                 dts: 'src/components.d.ts',
+                directoryAsNamespace: true,
                 resolvers: [
                     IconsResolver({
                         prefix: false,

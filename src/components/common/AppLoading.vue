@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <naive-provider>
+    <common-naive-provider>
         <div id="loading-container">
             <div class="boxes">
                 <div class="box">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </naive-provider>
+    </common-naive-provider>
 </template>
 
 <style scoped>

@@ -1,9 +1,9 @@
 <template>
     <n-tooltip placement="bottom" trigger="hover">
         <template #trigger>
-            <CommonWrapper>
+            <CommonCommonWrapper>
                 <div class="i-icon-park-outline:logout" color="red" />
-            </CommonWrapper>
+            </CommonCommonWrapper>
         </template>
         <span>Logout</span>
     </n-tooltip>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import Setting from '../common/Setting.vue'
 import ToggleSidebar from '../header/toggle-sidebar.vue'
-import Setting from './../common/setting.vue'
-import Breadcrumb from './breadcrumb.vue'
+import Breadcrumb from './Breadcrumb.vue'
 import DarkModeSwitch from './dark-mode-switch.vue'
 import Logout from './logout.vue'
 </script>

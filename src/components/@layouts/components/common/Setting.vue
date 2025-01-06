@@ -7,9 +7,9 @@ const appStore = useAppStore()
 <template>
     <n-tooltip placement="bottom" trigger="hover">
         <template #trigger>
-            <CommonWrapper @click="appStore.showSetting = !appStore.showSetting">
+            <CommonCommonWrapper @click="appStore.showSetting = !appStore.showSetting">
                 <icon-park-outline-setting-two />
-            </CommonWrapper>
+            </CommonCommonWrapper>
         </template>
         <span>setting</span>
     </n-tooltip>
