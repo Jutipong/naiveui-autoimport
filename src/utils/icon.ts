@@ -1,3 +1,4 @@
+import type { VNodeChild } from 'vue'
 import { Icon } from '@iconify/vue'
 import { NIcon } from 'naive-ui'
 
@@ -13,7 +14,7 @@ export function createIcon(icon?: string, props?: import('naive-ui').IconProps) 
         return
 
     const isLocal = icon.startsWith('local:')
-    let innerIcon: any
+    let innerIcon: VNodeChild
     if (isLocal) {
         const svgName = icon.replace('local:', '')
         const svg = import.meta.glob('@/assets/svg-icons/*.svg', {
